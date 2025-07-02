@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "C": {
+      "item": "ntrdeals-items:cosmolite_ingot"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "C C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ntrdeals-items:cosmolite_helmet"
+  }
+}

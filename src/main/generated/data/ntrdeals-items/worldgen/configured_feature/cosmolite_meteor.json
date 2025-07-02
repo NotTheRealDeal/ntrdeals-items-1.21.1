@@ -1,0 +1,13 @@
+{
+  "type": "ntrdeals-items:meteor",
+  "config": {
+    "primaryBlock": {
+      "Name": "minecraft:obsidian"
+    },
+    "radius": 2,
+    "secondaryBlock": {
+      "Name": "ntrdeals-items:cosmolite_ore"
+    },
+    "secondaryPercentage": 0.75
+  }
+}

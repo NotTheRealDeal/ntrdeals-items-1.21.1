@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "L": {
+      "item": "ntrdeals-items:lunarite_ingot"
+    }
+  },
+  "pattern": [
+    "L L",
+    "L L"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ntrdeals-items:lunarite_boots"
+  }
+}

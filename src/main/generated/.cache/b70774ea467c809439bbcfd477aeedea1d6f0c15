@@ -1,0 +1,5 @@
+// 1.21.1	2025-07-01T19:52:54.661405	NTRDeal's Items/Tags for minecraft:block
+d7b65ed7e1b48604b2d7076f36e9f819017413f7 data\minecraft\tags\block\needs_iron_tool.json
+0bc20f4a49f631b5d8bf5ae7b6a8e889bf4a37aa data\minecraft\tags\block\needs_diamond_tool.json
+f06d87616daf69a39b2f31f2bbab4303ee183e83 data\minecraft\tags\block\mineable\pickaxe.json
+0bc20f4a49f631b5d8bf5ae7b6a8e889bf4a37aa data\minecraft\tags\block\incorrect_for_diamond_tool.json

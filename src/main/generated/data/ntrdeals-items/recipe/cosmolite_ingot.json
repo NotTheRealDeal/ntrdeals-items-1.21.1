@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:lunarite_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ntrdeals-items:cosmolite_ingot"
+  }
+}

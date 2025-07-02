@@ -1,0 +1,17 @@
+{
+  "block.ntrdeals-items.cosmolite_ore": "Cosmolite Ore",
+  "block.ntrdeals-items.lunarite_ore": "Lunarite Ore",
+  "item.ntrdeals-items.cosmolite": "Cosmolite",
+  "item.ntrdeals-items.cosmolite_boots": "Cosmolite Boots",
+  "item.ntrdeals-items.cosmolite_chestplate": "Cosmolite Chestplate",
+  "item.ntrdeals-items.cosmolite_helmet": "Cosmolite Helmet",
+  "item.ntrdeals-items.cosmolite_ingot": "Cosmolite Ingot",
+  "item.ntrdeals-items.cosmolite_leggings": "Cosmolite Leggings",
+  "item.ntrdeals-items.lunarite": "Lunarite",
+  "item.ntrdeals-items.lunarite_boots": "Lunarite Boots",
+  "item.ntrdeals-items.lunarite_chestplate": "Lunarite Chestplate",
+  "item.ntrdeals-items.lunarite_helmet": "Lunarite Helmet",
+  "item.ntrdeals-items.lunarite_ingot": "Lunarite Ingot",
+  "item.ntrdeals-items.lunarite_leggings": "Lunarite Leggings",
+  "itemgroup.ntrdeals_items.ntrdeal_items_items": "NTRDeal's Items"
+}

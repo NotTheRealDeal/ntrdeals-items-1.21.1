@@ -1,0 +1,13 @@
+{
+  "type": "ntrdeals-items:meteor",
+  "config": {
+    "primaryBlock": {
+      "Name": "minecraft:end_stone"
+    },
+    "radius": 4,
+    "secondaryBlock": {
+      "Name": "ntrdeals-items:lunarite_ore"
+    },
+    "secondaryPercentage": 0.135
+  }
+}

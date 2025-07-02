@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lunarite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ntrdeals-items:lunarite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ntrdeals-items:lunarite_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lunarite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ntrdeals-items:lunarite_ingot"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.ntrdeal.ntrdeals_items.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ItemSettingsMixin",
+    "ItemStackMixin",
+    "LivingEntityMixin",
+    "MobEntityMixin",
+    "SmithingScreenHandlerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
