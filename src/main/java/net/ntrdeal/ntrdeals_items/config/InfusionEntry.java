@@ -1,6 +1,5 @@
 package net.ntrdeal.ntrdeals_items.config;
 
-import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import net.minecraft.server.ServerConfigEntry;
 

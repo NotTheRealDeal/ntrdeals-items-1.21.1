@@ -14,6 +14,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.random.Random;
 import net.ntrdeal.ntrdeals_items.NTRDealsItems;
+import net.ntrdeal.ntrdeals_items.config.InfusionUtil;
 import net.ntrdeal.ntrdeals_items.item.ModArmorMaterials;
 import org.jetbrains.annotations.Nullable;
 
@@ -28,19 +29,6 @@ public class Functions {
             ModArmorMaterials.LUNARITE
     );
 
-    private static final Map<Item, Map<RegistryEntry<EntityAttribute>, Double>> ATTRIBUTES = Map.of(
-            Items.REDSTONE, Map.of(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.025d, EntityAttributes.GENERIC_STEP_HEIGHT, 0.5d),
-            Items.LAPIS_LAZULI, Map.of(EntityAttributes.GENERIC_SCALE, -0.25d, EntityAttributes.GENERIC_MAX_HEALTH, -5d),
-            Items.COPPER_INGOT, Map.of(EntityAttributes.GENERIC_SCALE, 0.25d, EntityAttributes.GENERIC_MAX_HEALTH, 5d),
-            Items.DIAMOND, Map.of(EntityAttributes.GENERIC_ARMOR, 2d),
-            Items.IRON_INGOT, Map.of(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1d, EntityAttributes.GENERIC_ARMOR, -1.5d),
-            Items.QUARTZ, Map.of(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.5d, EntityAttributes.GENERIC_FALL_DAMAGE_MULTIPLIER, -0.25d),
-            Items.NETHERITE_INGOT, Map.of(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.075d, EntityAttributes.GENERIC_BURNING_TIME, -0.25d),
-            Items.GOLD_INGOT, Map.of(EntityAttributes.PLAYER_BLOCK_BREAK_SPEED, 0.25d, EntityAttributes.GENERIC_ATTACK_SPEED, 0.6d, EntityAttributes.GENERIC_ATTACK_DAMAGE, -2d),
-            Items.EMERALD, Map.of(EntityAttributes.GENERIC_WATER_MOVEMENT_EFFICIENCY, 0.25d, EntityAttributes.PLAYER_SUBMERGED_MINING_SPEED, 0.2d, EntityAttributes.GENERIC_OXYGEN_BONUS, 0.75d),
-            Items.AMETHYST_SHARD, Map.of(EntityAttributes.GENERIC_GRAVITY, -0.01d, EntityAttributes.GENERIC_FALL_DAMAGE_MULTIPLIER, -0.125d, EntityAttributes.PLAYER_SNEAKING_SPEED, 0.1125d)
-    );
-
     private static final Map<EquipmentSlot, AttributeModifierSlot> SLOT_MAP = Map.of(
             EquipmentSlot.HEAD, AttributeModifierSlot.HEAD,
             EquipmentSlot.CHEST, AttributeModifierSlot.CHEST,
@@ -51,7 +39,7 @@ public class Functions {
     public static boolean canInfuse(SmithingRecipeInput recipe, ItemStack stack){
         if (recipe.base().getItem() instanceof ArmorItem base){
             if (MATERIALS.contains(base.getMaterial())){
-                if (ATTRIBUTES.containsKey(recipe.addition().getItem())){
+                if (InfusionUtil.INFUSIONS.contains(recipe.addition().getItem())){
                     return true;
                 } else if (recipe.base().contains(ModComponents.INFUSE_COMPONENTS)){
                     stack.remove(ModComponents.INFUSE_COMPONENTS);
@@ -72,7 +60,7 @@ public class Functions {
 
     public static void infuseStack(ItemStack stack, Item addition) {
         if (stack.getItem() instanceof ArmorItem item){
-            Map<RegistryEntry<EntityAttribute>, Double> attributes = ATTRIBUTES.get(addition);
+            Map<RegistryEntry<EntityAttribute>, Double> attributes = InfusionUtil.INFUSIONS.getItemMap(addition);
             AttributeModifiersComponent.Builder builder = AttributeModifiersComponent.builder();
             for (RegistryEntry<EntityAttribute> entry: attributes.keySet()){
                 builder.add(entry, new EntityAttributeModifier(Identifier.of(NTRDealsItems.MOD_ID+Random.create().nextBetween(1,99999999)),

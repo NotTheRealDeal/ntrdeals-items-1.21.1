@@ -2,6 +2,7 @@ package net.ntrdeal.ntrdeals_items;
 
 import net.fabricmc.api.ModInitializer;
 import net.ntrdeal.ntrdeals_items.block.ModBlocks;
+import net.ntrdeal.ntrdeals_items.command.CommandRegister;
 import net.ntrdeal.ntrdeals_items.config.InfusionUtil;
 import net.ntrdeal.ntrdeals_items.item.ModItemGroups;
 import net.ntrdeal.ntrdeals_items.item.ModItems;
@@ -26,7 +27,7 @@ public class NTRDealsItems implements ModInitializer {
             throw new RuntimeException(e);
         }
         ModComponents.registerComponents();
-		ModCommands.register();
+		CommandRegister.register();
 		ModFeature.registerModFeature();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();

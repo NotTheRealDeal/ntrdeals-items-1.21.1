@@ -19,6 +19,10 @@ public class InfusionList extends ServerConfigList<String, InfusionEntry> {
         return this.contains(item.toString());
     }
 
+    public Boolean containsString(String string){
+        return this.contains(string);
+    }
+
     public Map<RegistryEntry<EntityAttribute>, Double> getItemMap(Item item){
         return InfusionUtil.getMap(Objects.requireNonNull(this.get(item.toString())).map);
     }
