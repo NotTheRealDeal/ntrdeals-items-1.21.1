@@ -9,8 +9,9 @@
 		"Artist: Evan2Awesome"
 	],
 	"contact": {
-		"homepage": "",
-		"sources": ""
+		"homepage": "https://modrinth.com/mod/ntrdeals-items",
+		"sources": "https://github.com/NotTheRealDeal/ntrdeals-items-1.21.1",
+		"issues": "https://github.com/NotTheRealDeal/ntrdeals-items-1.21.1/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/ntrdeals-items/icon.png",

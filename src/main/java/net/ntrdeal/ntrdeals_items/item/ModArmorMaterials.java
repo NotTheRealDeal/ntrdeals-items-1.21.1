@@ -23,7 +23,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.CHESTPLATE, 6);
                 map.put(ArmorItem.Type.HELMET, 2);
                 map.put(ArmorItem.Type.BODY, 5);
-            }), 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.LUNARITE),
+            }), 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, () -> Ingredient.ofItems(ModItems.LUNARITE_INGOT),
                     List.of(new ArmorMaterial.Layer(Identifier.of(NTRDealsItems.MOD_ID, "lunarite"))), 0, 0));
 
     public static final RegistryEntry<ArmorMaterial> COSMOLITE = registerArmorMaterial("cosmolite",
@@ -33,7 +33,7 @@ public class ModArmorMaterials {
                 map.put(ArmorItem.Type.CHESTPLATE, 6);
                 map.put(ArmorItem.Type.HELMET, 2);
                 map.put(ArmorItem.Type.BODY, 5);
-            }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.COSMOLITE),
+            }), 25, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, () -> Ingredient.ofItems(ModItems.COSMOLITE_INGOT),
                     List.of(new ArmorMaterial.Layer(Identifier.of(NTRDealsItems.MOD_ID, "cosmolite"))), 1, 0));
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material) {

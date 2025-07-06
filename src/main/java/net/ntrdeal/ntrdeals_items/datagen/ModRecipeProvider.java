@@ -7,7 +7,6 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
-import net.ntrdeal.ntrdeals_items.block.ModBlocks;
 import net.ntrdeal.ntrdeals_items.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;

@@ -30,7 +30,7 @@ public abstract class SmithingScreenHandlerMixin {
     )
     private ItemStack modifyCraftedItemStack(ItemStack itemStack) {
         if (this.currentRecipe != null && Functions.canInfuse(createRecipeInput(), itemStack)) {
-            Functions.infuseStack(itemStack, createRecipeInput());
+            Functions.infuseStack(itemStack, createRecipeInput().addition().getItem());
         }
         return itemStack;
     }

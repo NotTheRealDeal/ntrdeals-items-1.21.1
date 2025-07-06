@@ -1,6 +1,8 @@
 {
   "block.ntrdeals-items.cosmolite_ore": "Cosmolite Ore",
   "block.ntrdeals-items.lunarite_ore": "Lunarite Ore",
+  "commands.ntrdeals-items.failed.refresh": "Infusion could not be refreshed!",
+  "commands.ntrdeals-items.succeed.refresh": "Successfully refreshed %s's infusion!",
   "item.ntrdeals-items.cosmolite": "Cosmolite",
   "item.ntrdeals-items.cosmolite_boots": "Cosmolite Boots",
   "item.ntrdeals-items.cosmolite_chestplate": "Cosmolite Chestplate",

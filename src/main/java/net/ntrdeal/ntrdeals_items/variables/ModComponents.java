@@ -9,14 +9,20 @@ import net.minecraft.text.TextCodecs;
 import net.minecraft.util.Identifier;
 import net.ntrdeal.ntrdeals_items.NTRDealsItems;
 
-public class ModComponents {
-    public static final ComponentType<AttributeModifiersComponent> INFUSE_COMPONENTS =
-            Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(NTRDealsItems.MOD_ID, BigVariableClass.INFUSE_COMPONENTS_KEY),
-            ComponentType.<AttributeModifiersComponent>builder().codec(AttributeModifiersComponent.CODEC).build());
+import java.util.function.UnaryOperator;
 
-    public static final ComponentType<Text> ARMOR_TRIM_MATERIAL =
-            Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(NTRDealsItems.MOD_ID, BigVariableClass.ARMOR_TRIM_MATERIAL_KEY),
-            ComponentType.<Text>builder().codec(TextCodecs.STRINGIFIED_CODEC).build());
+public class ModComponents {
+
+    public static final ComponentType<AttributeModifiersComponent> INFUSE_COMPONENTS = register("infuse_components", builder ->
+            builder.codec(AttributeModifiersComponent.CODEC));
+
+    public static final ComponentType<Text> ARMOR_TRIM_MATERIAL = register("armor_trim_material", builder ->
+            builder.codec(TextCodecs.STRINGIFIED_CODEC));
+
+    private static <T>ComponentType<T> register(String name, UnaryOperator<ComponentType.Builder<T>> builderOperator) {
+        return Registry.register(Registries.DATA_COMPONENT_TYPE, Identifier.of(NTRDealsItems.MOD_ID, name),
+                builderOperator.apply(ComponentType.builder()).build());
+    }
 
     public static void registerComponents(){
         NTRDealsItems.LOGGER.info("Components are registering for: "+NTRDealsItems.MOD_ID);

@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.random.Random;
 import net.ntrdeal.ntrdeals_items.NTRDealsItems;
 import net.ntrdeal.ntrdeals_items.item.ModArmorMaterials;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,7 @@ public class Functions {
             Items.IRON_INGOT, Map.of(EntityAttributes.GENERIC_ATTACK_DAMAGE, 1d, EntityAttributes.GENERIC_ARMOR, -1.5d),
             Items.QUARTZ, Map.of(EntityAttributes.GENERIC_ATTACK_KNOCKBACK, 0.5d, EntityAttributes.GENERIC_FALL_DAMAGE_MULTIPLIER, -0.25d),
             Items.NETHERITE_INGOT, Map.of(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 0.075d, EntityAttributes.GENERIC_BURNING_TIME, -0.25d),
-            Items.GOLD_INGOT, Map.of(EntityAttributes.PLAYER_BLOCK_BREAK_SPEED, 0.5d, EntityAttributes.GENERIC_ATTACK_SPEED, 0.6d, EntityAttributes.GENERIC_ATTACK_DAMAGE, -2d),
+            Items.GOLD_INGOT, Map.of(EntityAttributes.PLAYER_BLOCK_BREAK_SPEED, 0.25d, EntityAttributes.GENERIC_ATTACK_SPEED, 0.6d, EntityAttributes.GENERIC_ATTACK_DAMAGE, -2d),
             Items.EMERALD, Map.of(EntityAttributes.GENERIC_WATER_MOVEMENT_EFFICIENCY, 0.25d, EntityAttributes.PLAYER_SUBMERGED_MINING_SPEED, 0.2d, EntityAttributes.GENERIC_OXYGEN_BONUS, 0.75d),
             Items.AMETHYST_SHARD, Map.of(EntityAttributes.GENERIC_GRAVITY, -0.01d, EntityAttributes.GENERIC_FALL_DAMAGE_MULTIPLIER, -0.125d, EntityAttributes.PLAYER_SNEAKING_SPEED, 0.1125d)
     );
@@ -61,9 +62,17 @@ public class Functions {
         return false;
     }
 
-    public static void infuseStack(ItemStack stack, SmithingRecipeInput recipe) {
+    @Nullable
+    public static ItemStack canInfuse(ItemStack stack){
+        if (stack.contains(DataComponentTypes.TRIM) && stack.getItem() instanceof ArmorItem armorItem && MATERIALS.contains(armorItem.getMaterial())){
+            return stack;
+        }
+        return null;
+    }
+
+    public static void infuseStack(ItemStack stack, Item addition) {
         if (stack.getItem() instanceof ArmorItem item){
-            Map<RegistryEntry<EntityAttribute>, Double> attributes = ATTRIBUTES.get(recipe.addition().getItem());
+            Map<RegistryEntry<EntityAttribute>, Double> attributes = ATTRIBUTES.get(addition);
             AttributeModifiersComponent.Builder builder = AttributeModifiersComponent.builder();
             for (RegistryEntry<EntityAttribute> entry: attributes.keySet()){
                 builder.add(entry, new EntityAttributeModifier(Identifier.of(NTRDealsItems.MOD_ID+Random.create().nextBetween(1,99999999)),
@@ -77,7 +86,7 @@ public class Functions {
                         .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, new EntityAttributeModifier(Identifier.of(NTRDealsItems.MOD_ID+ Random.create().nextBetween(1,99999999)), item.getMaterial().value().knockbackResistance(), EntityAttributeModifier.Operation.ADD_VALUE), SLOT_MAP.get(item.getSlotType()))
                         .build()).build());
             }
-            stack.applyChanges(ComponentChanges.builder().add(ModComponents.INFUSE_COMPONENTS, builder.build()).add(ModComponents.ARMOR_TRIM_MATERIAL, recipe.addition().getName()).build());
+            stack.applyChanges(ComponentChanges.builder().add(ModComponents.INFUSE_COMPONENTS, builder.build()).add(ModComponents.ARMOR_TRIM_MATERIAL, addition.getName()).build());
         }
     }
 

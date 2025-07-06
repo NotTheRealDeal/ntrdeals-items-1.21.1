@@ -34,5 +34,7 @@ public class EnglishProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.COSMOLITE_ORE, "Cosmolite Ore");
 
         translationBuilder.add("itemgroup.ntrdeals_items.ntrdeal_items_items", "NTRDeal's Items");
+        translationBuilder.add("commands.ntrdeals-items.failed.refresh", "Infusion could not be refreshed!");
+        translationBuilder.add("commands.ntrdeals-items.succeed.refresh", "Successfully refreshed %s's infusion!");
     }
 }
