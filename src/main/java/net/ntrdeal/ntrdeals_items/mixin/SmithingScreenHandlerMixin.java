@@ -20,14 +20,7 @@ public abstract class SmithingScreenHandlerMixin {
 
     @Shadow protected abstract SmithingRecipeInput createRecipeInput();
 
-    @ModifyVariable(
-            method = "updateResult()V",
-            at = @At(
-                    value = "STORE",
-                    ordinal = 0,
-                    target = "Lnet/minecraft/item/ItemStack;itemStack:Lnet/minecraft/item/ItemStack;"
-            )
-    )
+    @ModifyVariable(method = "updateResult", at = @At(value = "STORE", ordinal = 0, target = "Lnet/minecraft/item/ItemStack;itemStack:Lnet/minecraft/item/ItemStack;"))
     private ItemStack modifyCraftedItemStack(ItemStack itemStack) {
         if (this.currentRecipe != null && Functions.canInfuse(createRecipeInput(), itemStack)) {
             Functions.infuseStack(itemStack, createRecipeInput().addition().getItem());

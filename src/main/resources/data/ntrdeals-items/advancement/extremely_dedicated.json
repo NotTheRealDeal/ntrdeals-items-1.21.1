@@ -1,0 +1,80 @@
+{
+  "parent": "minecraft:adventure/trim_with_any_armor_pattern",
+  "criteria": {
+    "netherite_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ntrdeals-items:cosmolite_helmet",
+            "components": {
+              "minecraft:trim": {
+                "material": "minecraft:netherite",
+                "pattern": "minecraft:silence"
+              }
+            }
+          },
+          {
+            "items": "ntrdeals-items:cosmolite_chestplate",
+            "components": {
+              "minecraft:trim": {
+                "material": "minecraft:netherite",
+                "pattern": "minecraft:silence"
+              }
+            }
+          },
+          {
+            "items": "ntrdeals-items:cosmolite_leggings",
+            "components": {
+              "minecraft:trim": {
+                "material": "minecraft:netherite",
+                "pattern": "minecraft:silence"
+              }
+            }
+          },
+          {
+            "items": "ntrdeals-items:cosmolite_boots",
+            "components": {
+              "minecraft:trim": {
+                "material": "minecraft:netherite",
+                "pattern": "minecraft:silence"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "ntrdeals-items.advancements.adventure.extremely_dedicated.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "components": {
+        "minecraft:trim": {
+          "material": "minecraft:netherite",
+          "pattern": "minecraft:silence",
+          "show_in_tooltip": false
+        }
+      },
+      "count": 1,
+      "id": "ntrdeals-items:cosmolite_chestplate"
+    },
+    "title": {
+      "translate": "ntrdeals-items.advancements.adventure.extremely_dedicated.title"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "requirements": [
+    [
+      "netherite_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": true
+}

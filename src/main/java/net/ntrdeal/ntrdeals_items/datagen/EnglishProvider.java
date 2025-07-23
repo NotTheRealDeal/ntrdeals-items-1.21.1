@@ -2,8 +2,11 @@ package net.ntrdeal.ntrdeals_items.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
+import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
+import net.ntrdeal.ntrdeals_items.attribute.ModAttributes;
 import net.ntrdeal.ntrdeals_items.block.ModBlocks;
+import net.ntrdeal.ntrdeals_items.item.ModItemGroups;
 import net.ntrdeal.ntrdeals_items.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -32,9 +35,23 @@ public class EnglishProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModBlocks.LUNARITE_ORE, "Lunarite Ore");
         translationBuilder.add(ModBlocks.COSMOLITE_ORE, "Cosmolite Ore");
+        translationBuilder.add(ModBlocks.RAW_LUNARITE_BLOCK, "Block of Raw Lunarite");
+        translationBuilder.add(ModBlocks.RAW_COSMOLITE_BLOCK, "Block of Raw Cosmolite");
+        translationBuilder.add(ModBlocks.DRIED_CHORUS_FLOWER, "Dried Chorus Flower");
 
-        translationBuilder.add("itemgroup.ntrdeals_items.ntrdeal_items_items", "NTRDeal's Items");
-        translationBuilder.add("commands.ntrdeals-items.failed.refresh", "Infusion could not be refreshed!");
-        translationBuilder.add("commands.ntrdeals-items.succeed.refresh", "Successfully refreshed %s's infusion!");
+        translationBuilder.add(ModAttributes.MOVEMENT_SCALE, "Movement Scale");
+        translationBuilder.add(ModAttributes.ARMOR_PENETRATION, "Armor Penetration");
+        translationBuilder.add(ModAttributes.PASSIVE_REGENERATION, "Passive Regeneration");
+        translationBuilder.add(ModAttributes.APPETITE, "Appetite");
+        translationBuilder.add(ModAttributes.SCALE, "Scale");
+        translationBuilder.add(ModAttributes.SHIELD_FRAGILITY, "Shield Fragility");
+        translationBuilder.add(ModAttributes.RANGED_ATTACK_MULTIPLIER, "Ranged Attack Multiplier");
+        translationBuilder.add(ModAttributes.BANE_OF_ADOLESCENCE, "Bane of Adolescence");
+        translationBuilder.add(ModAttributes.CHARGE_TIME, "Charge Time");
+
+        translationBuilder.add(Registries.ITEM_GROUP.getKey(ModItemGroups.NTRDEALS_ITEMS_GROUP).get(), "NTRDeal's Items");
+
+        translationBuilder.add("ntrdeals-items.advancements.adventure.extremely_dedicated.title", "Extreme Dedication");
+        translationBuilder.add("ntrdeals-items.advancements.adventure.extremely_dedicated.description", "Trim a full cosmolite set with netherite silence");
     }
 }

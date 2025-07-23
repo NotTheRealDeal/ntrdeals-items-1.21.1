@@ -3,7 +3,7 @@
 	"id": "ntrdeals-items",
 	"version": "${version}",
 	"name": "NTRDeal's Items",
-	"description": "This is a mod that adds many tech items, infusing armor, and 2 new sets of armor!",
+	"description": "This is a mod that adds infusing armor, and 2 new sets of armor!",
 	"authors": [
 		"Coder: NTRDeal",
 		"Artist: Evan2Awesome"
@@ -22,6 +22,9 @@
 		],
 		"fabric-datagen": [
 			"net.ntrdeal.ntrdeals_items.NTRDealsItemsDataGenerator"
+		],
+		"client": [
+			"net.ntrdeal.ntrdeals_items.NTRDealsItemsClient"
 		]
 	},
 	"mixins": [

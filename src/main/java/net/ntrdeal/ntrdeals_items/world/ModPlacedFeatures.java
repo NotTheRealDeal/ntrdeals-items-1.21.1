@@ -29,10 +29,10 @@ public class ModPlacedFeatures {
                 HeightRangePlacementModifier.uniform(YOffset.aboveBottom(64), YOffset.aboveBottom(94)));
 
         register(context, COSMOLITE_METEOR_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COSMOLITE_METEOR_KEY),
-                RarityFilterPlacementModifier.of(25),
+                RarityFilterPlacementModifier.of(45),
                 SquarePlacementModifier.of(),
                 BiomePlacementModifier.of(),
-                HeightRangePlacementModifier.uniform(YOffset.aboveBottom(14), YOffset.aboveBottom(34)));
+                HeightRangePlacementModifier.uniform(YOffset.aboveBottom(14), YOffset.aboveBottom(44)));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

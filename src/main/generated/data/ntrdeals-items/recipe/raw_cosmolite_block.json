@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    },
+    {
+      "item": "ntrdeals-items:cosmolite"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ntrdeals-items:raw_cosmolite_block"
+  }
+}

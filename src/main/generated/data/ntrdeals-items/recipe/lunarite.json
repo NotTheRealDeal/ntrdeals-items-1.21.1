@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ntrdeals-items:raw_lunarite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "ntrdeals-items:lunarite"
+  }
+}

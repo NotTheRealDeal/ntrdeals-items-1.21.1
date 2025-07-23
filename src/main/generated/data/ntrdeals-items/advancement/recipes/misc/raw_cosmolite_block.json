@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cosmolite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "ntrdeals-items:cosmolite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "ntrdeals-items:raw_cosmolite_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cosmolite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ntrdeals-items:raw_cosmolite_block"
+    ]
+  }
+}

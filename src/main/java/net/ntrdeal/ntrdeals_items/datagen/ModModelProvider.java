@@ -18,6 +18,8 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUNARITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COSMOLITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_LUNARITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_COSMOLITE_BLOCK);
 
         /*blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.LUNARITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.COSMOLITE_BLOCK);*/

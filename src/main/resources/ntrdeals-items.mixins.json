@@ -3,13 +3,18 @@
   "package": "net.ntrdeal.ntrdeals_items.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "EnchantmentHelperMixin",
     "ItemSettingsMixin",
     "ItemStackMixin",
     "LivingEntityMixin",
     "MobEntityMixin",
+    "PlayerEntityMixin",
     "SmithingScreenHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "ArmorFeatureRendererMixin"
+  ]
 }

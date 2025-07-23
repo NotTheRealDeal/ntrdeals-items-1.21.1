@@ -29,10 +29,10 @@ public class ModItemGroups {
                         entries.add(ModItems.COSMOLITE_BOOTS);
                         entries.add(ModBlocks.LUNARITE_ORE);
                         entries.add(ModBlocks.COSMOLITE_ORE);
-                        /*entries.add(ModBlocks.LUNARITE_BLOCK);
-                        entries.add(ModBlocks.COSMOLITE_BLOCK);*/
-                            })
-                    .build());
+                        entries.add(ModBlocks.RAW_LUNARITE_BLOCK);
+                        entries.add(ModBlocks.RAW_COSMOLITE_BLOCK);
+                        entries.add(ModBlocks.DRIED_CHORUS_FLOWER);
+                    }).build());
 
     public static void registerItemGroups(){
         NTRDealsItems.LOGGER.info("Registering Item Groups for "+NTRDealsItems.MOD_ID);

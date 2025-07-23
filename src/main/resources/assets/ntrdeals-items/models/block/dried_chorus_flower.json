@@ -1,0 +1,6 @@
+{
+  "parent": "ntrdeals-items:block/template_dried_chorus_flower",
+  "textures": {
+    "texture": "ntrdeals-items:block/dried_chorus_flower"
+  }
+}

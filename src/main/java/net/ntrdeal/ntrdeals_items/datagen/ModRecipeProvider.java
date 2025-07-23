@@ -7,6 +7,7 @@ import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.ntrdeal.ntrdeals_items.block.ModBlocks;
 import net.ntrdeal.ntrdeals_items.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -30,15 +31,25 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.COSMOLITE), conditionsFromItem(ModItems.COSMOLITE))
                         .offerTo(exporter);
 
-        /*ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.LUNARITE_BLOCK)
-                        .input(ModItems.LUNARITE_INGOT, 9)
-                        .criterion(hasItem(ModItems.LUNARITE_INGOT), conditionsFromItem(ModItems.LUNARITE_INGOT))
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RAW_LUNARITE_BLOCK)
+                        .input(ModItems.LUNARITE, 9)
+                        .criterion(hasItem(ModItems.LUNARITE), conditionsFromItem(ModItems.LUNARITE))
                         .offerTo(exporter);
 
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.COSMOLITE_BLOCK)
-                        .input(ModItems.COSMOLITE_INGOT, 9)
-                        .criterion(hasItem(ModItems.COSMOLITE_INGOT), conditionsFromItem(ModItems.COSMOLITE_INGOT))
-                        .offerTo(exporter);*/
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModBlocks.RAW_COSMOLITE_BLOCK)
+                        .input(ModItems.COSMOLITE, 9)
+                        .criterion(hasItem(ModItems.COSMOLITE), conditionsFromItem(ModItems.COSMOLITE))
+                        .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.LUNARITE, 9)
+                        .input(ModBlocks.RAW_LUNARITE_BLOCK)
+                        .criterion(hasItem(ModBlocks.RAW_LUNARITE_BLOCK), conditionsFromItem(ModBlocks.RAW_LUNARITE_BLOCK))
+                        .offerTo(exporter);
+
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COSMOLITE, 9)
+                        .input(ModBlocks.RAW_COSMOLITE_BLOCK)
+                        .criterion(hasItem(ModBlocks.RAW_COSMOLITE_BLOCK), conditionsFromItem(ModBlocks.RAW_COSMOLITE_BLOCK))
+                        .offerTo(exporter);
         
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.LUNARITE_HELMET)
                 .pattern("LLL")

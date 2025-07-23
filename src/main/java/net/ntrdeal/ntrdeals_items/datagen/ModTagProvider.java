@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.ntrdeal.ntrdeals_items.item.ModItemTags;
 import net.ntrdeal.ntrdeals_items.item.ModItems;
 
 import java.util.concurrent.CompletableFuture;
@@ -22,6 +23,12 @@ public class ModTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
                 .add(ModItems.COSMOLITE_LEGGINGS);
         getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+                .add(ModItems.COSMOLITE_BOOTS);
+
+        getOrCreateTagBuilder(ModItemTags.COSMOLITE_ARMOR)
+                .add(ModItems.COSMOLITE_HELMET)
+                .add(ModItems.COSMOLITE_CHESTPLATE)
+                .add(ModItems.COSMOLITE_LEGGINGS)
                 .add(ModItems.COSMOLITE_BOOTS);
 
         getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
